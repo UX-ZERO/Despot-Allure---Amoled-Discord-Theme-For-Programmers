@@ -1,0 +1,514 @@
+/**
+ * @name Despot Allure v16 (Optimized Test)
+ * @description Enhanced Amoled Black Diamond theme tailored for programmers.
+ * @author UX-ZERO
+ * @author user ID: 302130700470059021
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap');
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+/* 1. CORE VARIABLES & SETUP */
+body {
+    --font: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+    --code-font: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+    font-weight: 400;
+    font-size: 13px !important;
+    letter-spacing: -0.03ch;
+
+    --gap: 10px;
+    --divider-thickness: 2px;
+    --border-thickness: 1px;
+    --border-hover-transition: 120ms ease;
+
+    --animations: on;
+    --list-item-transition: 120ms ease;
+    --dms-icon-svg-transition: 0.4s ease;
+
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    --custom-window-controls: off;
+    --window-control-size: 14px;
+
+    --custom-dms-icon: off;
+    --custom-dms-background: off;
+    --background-image: off;
+
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+
+    --small-user-panel: on;
+    --unrounding: on;
+    --round-pfp: on;
+
+    --custom-spotify-bar: on;
+    --ascii-titles: off;
+    --ascii-loader: system24;
+
+    --panel-labels: on;
+    --label-color: #8a8a8a;
+    --label-hover-color: #ffffff;
+    --label-font-weight: 600;
+
+    --custom-chatbar: separated !important;
+    --chatbar-height: 50px !important;
+}
+
+:root {
+    --colors: on;
+    --true-white: #ffffff;
+    --true-black: #000000;
+
+    /* Completely square UI - Hardware Optimized */
+    --radius-xs: 0px !important;
+    --radius-sm: 0px !important;
+    --radius-md: 0px !important;
+    --radius-lg: 0px !important;
+    --radius-xl: 0px !important;
+    --radius-round: 0px !important;
+    --border-radius-xs: 0px !important;
+    --border-radius-sm: 0px !important;
+    --border-radius-md: 0px !important;
+    --border-radius-lg: 0px !important;
+    --border-radius-xl: 0px !important;
+
+    /* Text Colors */
+    --text-0: #000000;
+    --text-1: #ffffff;
+    --text-2: #f0f0f0;
+    --text-3: #dcdcdc;
+    --text-4: #8a8a8a;
+    --text-5: #505050;
+
+    /* Backgrounds - Pure AMOLED Black */
+    --bg-1: #000000;
+    --bg-2: #000000;
+    --bg-3: #000000;
+    --bg-4: #000000;
+    --background-base-low: #000000;
+    --background-base-lower: #000000;
+
+    --hover: rgba(255, 255, 255, 0.08);
+    --active: rgba(255, 255, 255, 0.16);
+    --active-2: rgba(255, 255, 255, 0.24);
+    --message-hover: var(--hover);
+
+    /* Accents & Highlights */
+    --accent-1: #ffffff;
+    --accent-2: #ffffff;
+    --accent-3: #ffffff;
+    --accent-4: #e0e0e0;
+    --accent-5: #cccccc;
+    --accent-new: #ffffff;
+
+    --mention: linear-gradient(to right, rgba(255, 255, 255, 0.12) 40%, transparent);
+    --mention-hover: linear-gradient(to right, rgba(255, 255, 255, 0.2) 40%, transparent);
+    --reply: linear-gradient(to right, rgba(255, 255, 255, 0.08) 40%, transparent);
+    --reply-hover: linear-gradient(to right, rgba(255, 255, 255, 0.15) 40%, transparent);
+
+    /* Status Indicators */
+    --online: #00e676;
+    --dnd: #dc143c;
+    --idle: #ffb300;
+    --streaming: #a855f7;
+    --offline: #80848e;
+
+    /* Borders */
+    --border-light: rgba(255, 255, 255, 0.15);
+    --border: rgba(255, 255, 255, 0.25);
+    --border-hover: #ffffff;
+    --button-border: rgba(255, 255, 255, 0.2);
+}
+
+/* 2. AMOLED BLACK OVERRIDES */
+.theme-dark,
+.theme-light,
+.visual-refresh,
+.visual-refresh.theme-dark {
+    --background-primary: #000000 !important;
+    --background-secondary: #000000 !important;
+    --background-secondary-alt: #000000 !important;
+    --background-tertiary: #000000 !important;
+    --background-floating: #000000 !important;
+    --bg-base-primary: #000000 !important;
+    --bg-base-secondary: #000000 !important;
+    --bg-base-tertiary: #000000 !important;
+    --bg-surface-overlay: #000000 !important;
+    --bg-surface-raised: #000000 !important;
+    --modal-background: #000000 !important;
+    --modal-footer-background: #000000 !important;
+}
+
+body,
+#app-mount,
+.app__160d8,
+.bg__960e4,
+.container__01ae2,
+[class*="sidebar_"],
+[class*="chat_"],
+[class*="panels_"],
+[class*="container_c8ffbb"] {
+    background-color: #000000 !important;
+}
+
+/* 3. SELECTION & HIGHLIGHTS */
+::selection {
+    color: var(--true-black);
+    background: var(--true-white);
+}
+
+/* 4. PROGRAMMER / CODE BLOCK & TEXT DENSITY */
+code,
+pre,
+[class*="codeBlockText"] {
+    font-family: var(--code-font) !important;
+    font-size: 14px !important;
+}
+
+[class*="messageContent_"] {
+    font-size: 0.95rem !important;
+    line-height: 1.25rem !important;
+}
+
+[class*="message_"] {
+    padding-top: 0.125rem !important;
+    padding-bottom: 0.125rem !important;
+}
+
+pre {
+    background-color: #050505 !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-left: 3px solid #ffffff !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+    will-change: auto;
+}
+
+pre:hover {
+    border-color: #ffffff !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+    width: 5px !important;
+    height: 0px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 0px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff !important;
+}
+
+/* 5. MEMBER LIST VISIBILITY */
+[class*="membersWrap_"],
+[class*="membersWrap_"]:hover {
+    width: 240px !important;
+    min-width: 240px !important;
+    max-width: 240px !important;
+    position: relative !important;
+    transition: none !important;
+    animation: none !important;
+    overflow: hidden !important;
+    height: 100% !important;
+}
+
+[class*="container_c8ffbb"],
+[class*="container_c8ffbb"]:hover {
+    width: 240px !important;
+    min-width: 240px !important;
+    max-width: 240px !important;
+    position: relative !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+[class*="membersWrap_"] [class*="memberText_"],
+[class*="membersWrap_"] [class*="membersGroup_"],
+[class*="membersWrap_"] [class*="activity_"] {
+    opacity: 1 !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+/* 6. TERMINAL PANEL LABELS & BORDER FIXES */
+@container body style(--panel-labels: on) {
+
+    [class*="guilds_"]::after,
+    [class*="panels_"]::after,
+    [class*="sidebarList_"]::after,
+    [class*="subtitleContainer_"]::after,
+    [class*="messagesWrapper_"]::after,
+    [class*="channelTextArea_"]::after,
+    [class*="container_c8ffbb"]::after,
+    [class*="callContainer_"]::after {
+        display: block;
+        color: var(--label-color);
+        font-family: var(--code-font);
+        font-weight: var(--label-font-weight);
+        position: absolute;
+        top: -19px;
+        left: 160px;
+        background-color: #000000;
+        padding: 0 4px;
+        z-index: 100;
+        font-size: 15px;
+        line-height: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        transition: color var(--border-hover-transition);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-sizing: border-box;
+        pointer-events: none;
+    }
+
+    [class*="guilds_"]:hover::after,
+    [class*="panels_"]:hover::after,
+    [class*="sidebarList_"]:hover::after,
+    [class*="subtitleContainer_"]:hover::after,
+    [class*="messagesWrapper_"]:hover::after,
+    [class*="channelTextArea_"]:hover::after,
+    [class*="container_c8ffbb"]:hover::after,
+    [class*="callContainer_"]:hover::after {
+        color: var(--label-hover-color);
+        border-color: #ffffff;
+    }
+
+    [class*="guilds_"]::after {
+        content: '[nav]';
+        left: 0px !important;
+    }
+
+    [class*="panels_"]::after {
+        content: '[user]';
+    }
+
+    [class*="sidebarList_"]::after {
+        content: '[channels]';
+    }
+
+    [class*="subtitleContainer_"]::after {
+        content: '[COMMUNICATION_HUB]';
+    }
+
+    [class*="messagesWrapper_"]::after {
+        content: '[chat_log]';
+    }
+
+    [class*="channelTextArea_"]::after {
+        content: '[input]';
+    }
+
+    [class*="container_c8ffbb"]::after {
+        content: '[members]';
+    }
+
+    [class*="callContainer_"]::after {
+        content: '[vc_session]';
+        left: 20px !important;
+    }
+
+    [class*="sidebarList_"],
+    [class*="container_c8ffbb"],
+    [class*="messagesWrapper_"],
+    [class*="channelTextArea_"],
+    [class*="callContainer_"] {
+        position: relative;
+        overflow: visible !important;
+    }
+}
+
+/* 7. ASCII/TEXT STYLE & CHAT SPACING */
+#vc-spotify-progress-bar {
+    margin: 8px 0 0 0;
+}
+
+#app-mount #vc-spotify-progress-bar .bar__4c059 {
+    height: 18px !important;
+    top: 0 !important;
+    background-color: #111111 !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#vc-spotify-progress-bar .vc-spotify-time-left,
+#vc-spotify-progress-bar .vc-spotify-time-right {
+    z-index: 1;
+    top: 0;
+    margin-top: 0;
+    mix-blend-mode: difference;
+    font-size: 11px;
+    font-family: var(--code-font);
+    line-height: 18px;
+    pointer-events: none;
+    color: #ffffff;
+}
+
+#vc-spotify-progress-bar .vc-spotify-time-left {
+    left: 6px;
+}
+
+#vc-spotify-progress-bar .vc-spotify-time-right {
+    right: 6px;
+}
+
+/* Chat Log & Scrollbar Tight Alignment to Input */
+[class*="scrollerSpacer_"] {
+    height: 6px !important;
+}
+
+[class*="chat_"] [class*="form_"] {
+    margin-top: 2px !important;
+    padding-top: 0px !important;
+}
+
+[class*="messagesWrapper_"] {
+    margin-bottom: 2px !important;
+}
+
+/* 8. HEADERS, SIDEBAR & USER CONTROLS COMPACTING */
+h1,
+h2,
+h3,
+.header-primary,
+[class*="header_"],
+[class*="title_"] {
+    text-shadow: none !important;
+    transition: text-shadow 0.2s ease !important;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+.header-primary:hover,
+[class*="header_"]:hover,
+[class*="title_"]:hover {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Connections Header Rename */
+[class*="sidebarList"]::before,
+.container_c8ffbb::before,
+[class*="sidebar"]>[class*="container"]::before {
+    content: "connections" !important;
+}
+
+[class*="sidebar"] [class*="header_"],
+[class*="sidebarList"] [class*="header_"] {
+    padding-top: 15px !important;
+    margin-top: -20px !important;
+}
+
+/* Category Headers */
+[class*="sidebar"] [class*="containerDefault"] [class*="mainContent"] {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background: transparent !important;
+    color: #ffffff !important;
+    font-family: var(--code-font) !important;
+    font-size: 14px !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    margin-bottom: 14px !important;
+    transition: border-color 0.2s ease, text-shadow 0.2s ease !important;
+}
+
+[class*="sidebar"] [class*="containerDefault"]:hover [class*="mainContent"] {
+    border-bottom-color: #ffffff !important;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Channel Items Compact Sizing */
+[class*="sidebar"] [class*="channel_"] [class*="name_"] {
+    font-size: 12px !important;
+}
+
+/* Direct Messages Friend Names Enlarge */
+[class*="privateChannels_"] [class*="channel_"] [class*="name_"] {
+    font-size: 14.5px !important;
+    font-weight: 500 !important;
+}
+
+/* User Panel Controls - Ultra-Compact Button Spacing */
+[class*="panels_"] [class*="buttons_"] {
+    gap: 0px !important;
+}
+
+[class*="panels_"] [class*="button_"] {
+    margin: 0 !important;
+    padding: 0 5px !important;
+    min-width: 0px !important;
+    width: auto !important;
+}
+
+/* Home / Direct Messages Icon */
+[data-list-item-id="guildsnav___home"] .childWrapper_a5c12a {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* 9. CUSTOM ASCII LOADER */
+.content_a2f514 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.content_a2f514>.spinner_a2f514 {
+    display: none;
+}
+
+.content_a2f514::before {
+    display: block;
+    content: '██████╗ ███████╗███████╗██████╗  ██████╗ ████████╗    █████╗ ██╗     ██╗     ██╗   ██╗██████╗ ███████╗\A██╔══██╗██╔════╝██╔════╝██╔══██╗██╔═══██╗╚══██╔══╝   ██╔══██╗██║     ██║     ██║   ██║██╔══██╗██╔════╝\A██║  ██║█████╗  ███████╗██████╔╝██║   ██║   ██║      ███████║██║     ██║     ██║   ██║██████╔╝█████╗  \A██║  ██║██╔══╝  ╚════██║██╔═══╝ ██║   ██║   ██║      ██╔══██║██║     ██║     ██║   ██║██╔══██╗██╔══╝  \A██████╔╝███████╗███████║██║     ╚██████╔╝   ██║      ██║  ██║███████╗███████╗╚██████╔╝██║  ██║███████╗\A╚═════╝ ╚══════╝╚══════╝╚═╝      ╚═════╝    ╚═╝      ╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝';
+    font-size: 10px;
+    font-family: var(--code-font);
+    white-space: pre;
+    line-height: 1.15;
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5) !important;
+}
+
+/* 10. VISUAL BORDERS & CONTAINERS */
+[class*="guilds_"],
+[class*="panels_"],
+[class*="sidebarList_"],
+[class*="subtitleContainer_"],
+[class*="messagesWrapper_"],
+[class*="channelTextArea_"],
+[class*="container_c8ffbb"] {
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-sizing: border-box !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+    will-change: auto;
+}
+
+[class*="guilds_"]:hover,
+[class*="panels_"]:hover,
+[class*="sidebarList_"]:hover,
+[class*="subtitleContainer_"]:hover,
+[class*="messagesWrapper_"]:hover,
+[class*="channelTextArea_"]:hover,
+[class*="container_c8ffbb"]:hover {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.12) !important;
+}
+
+/* 11. LAYOUT TWEAKS */
+[class*="guilds_"] {
+    margin-left: -10px !important;
+}
